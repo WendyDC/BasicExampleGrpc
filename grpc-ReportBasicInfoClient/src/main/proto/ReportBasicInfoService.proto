@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.example.grpc.server.grpcserver;
+
+message getReportBasicInfoRequest {
+  string idClient = 1 ;
+}
+
+message getReportBasicInfoResponse {
+  string infoReport = 1 ;
+}
+
+service getReportBasicInfoService {
+  rpc getReport (getReportBasicInfoRequest) returns (getReportBasicInfoResponse);
+}
